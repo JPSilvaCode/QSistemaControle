@@ -1,0 +1,35 @@
+﻿@model QSistemaControle.Models.Grupo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Grupo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Professor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Professor.NomeCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Add Aluno", "AddEstudante", new { id = Model.GrupoId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GrupoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
